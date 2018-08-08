@@ -12,6 +12,20 @@ it('should add two numbers', () => {
 	
 });
 
+it('should async add two numbers', (done) => {
+	utils.asyncSquare(5, (result) => {
+		expect(result).toBeA('number').toBe(25);
+		done();
+	});
+});
+
+it('should async square two numbers', (done) => {
+	utils.asyncAdd(10, 3, (sum) => {
+		expect(sum).toBeA('number').toBe(13);
+		done();
+	});
+});
+
 it('should square a number', () => {
 	let result = utils.square(5);
 
